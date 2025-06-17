@@ -3,13 +3,12 @@ name: Automatic Data Preprocessing
 on:
   push:
     branches:
-      - main  
+      - main
     paths:
-      - 'heart_attack_raw/**'           
-      - 'preprocessing/automate_Nama-Anda.py' 
+      - "heart_attack_raw/**"
+      - "preprocessing/automate_tandry-simamora.py"
 
 jobs:
-  
   run-preprocessing:
     runs-on: ubuntu-latest
     steps:
@@ -19,13 +18,12 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12.7' 
+          python-version: "3.12.7"
 
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
           pip install pandas numpy
-
 
       - name: Run Preprocessing Script
         run: python preprocessing/automate_Nama-Anda.py
